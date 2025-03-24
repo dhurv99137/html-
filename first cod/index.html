@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+    div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:100px;}
+  25%  {background-color:yellow; left:50px; top:0px; width: 50px;}
+  50%  {background-color:blue; left:200px; top:100px;}
+  75%  {background-color:green; left:50px; top:100px; height: 500px;}
+  100% {background-color:red; left:05px; top:10px;}
+}
+</style>
+<body style="background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,255,248,0) 100%);">
+    <ol >
+        <li style="color: white;">home</li>
+        <li style="color: white;">about</li>
+        <li style="color: white;">content</li>
+        <li style="color: white;">Blog</li>
+        <li style="color: white;">Others</li>
+    </ol>
+    <ul>
+        <li style="color: white;">Africa</li>
+        <li style="color: white;">Asia</li>
+        <li style="color: white;">Europe</li>
+        <li style="color: white;">North America</li>
+        <li style="color: white;">South America</li>
+        <li style="color: white;">\Oceania</li>
+    </ul>
+    <img style="height: 250px; width: 300px; border-radius: 20%;" src="download.jpeg" alt="">
+
+    <div></div>
+</body>
+</html>
