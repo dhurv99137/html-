@@ -1,0 +1,101 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.timetable {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days */
+    grid-template-rows: auto repeat(auto-fit, minmax(50px, auto)); /* Auto rows for time slots */
+    margin: 20px;
+}
+
+.day-header {
+    background-color: #ddd;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    grid-column: span 1;
+}
+
+.time-slot {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.time-slot:last-child {
+    border-bottom: none;
+}
+
+.timetable > div:nth-child(7n) { 
+    border-right: none;
+}
+
+.timetable > div:nth-child(8n + 1), 
+.timetable > div:nth-child(8n + 8) {
+    background-color: #f9e79f; /
+}
+
+.timetable > div:nth-child(8n + 2), 
+.timetable > div:nth-child(8n + 9) {
+    background-color: #a9d18e; 
+}
+
+.timetable > div:nth-child(8n + 3), 
+.timetable > div:nth-child(8n + 10) {
+    background-color: #8ac4ff; 
+}
+
+.timetable > div:nth-child(8n + 4), 
+.timetable > div:nth-child(8n + 11) {
+    background-color: #e5989b; /
+}
+
+.timetable > div:nth-child(8n + 5), 
+.timetable > div:nth-child(8n + 12) {
+    background-color: #c3aed6; /* Light Purple */
+}
+
+.timetable > div:nth-child(8n + 6), /* Saturday */
+.timetable > div:nth-child(8n + 13) {
+    background-color: #f0b27a; /* Light Orange */
+}
+
+.timetable > div:nth-child(8n + 7), /* Sunday */
+.timetable > div:nth-child(8n + 14) {
+    background-color: #f5b7b1; /* Light Pink */
+}
+
+/* Adding some visual collage effects */
+.timetable > div:nth-child(odd) {
+    transform: rotate(-1deg);
+}
+
+.timetable > div:nth-child(even) {  
+    transform: rotate(1deg);
+}
+
+.timetable > div:nth-child(3n + 2) {
+    opacity: 0.95;
+}
+
+.timetable > div:nth-child(5n + 1) {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
